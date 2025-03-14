@@ -20,7 +20,7 @@
             <a href="product.html" class="hover:underline">PRODUCTS</a>
             <a href="contact.html" class="hover:underline">CONTACT</a>
         </div>
-        <div class="md:hidden">
+        <div class="md:hidden cursor-pointer" id="navbar">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="w-7">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -28,6 +28,18 @@
 
 
         </div>
+        
+       
+
+    </div>
+    <div class="flex flex-col bg-green-300 fixed right-0 p-3 gap-10 md:hidden transition-all duration-1000" style="width: 50%;height: 100vh; right: -50%;;" id="menu">
+        <p class="text-right cursor-pointer" id="close">X</p>
+        <a href="index.html" class="hover:underline">HOME</a>
+    <a href="product.html" class="hover:underline">PRODUCTS</a>
+    <a href="contact.html" class="hover:underline">CONTACT</a>
+    
+    
+    
 
     </div>
     <!---section-2-->
@@ -132,6 +144,19 @@
     <div class="bg-green-400">
         <h1 class="font-bold text-xl text-center">GREENDEN @ 2025</h1>
     </div>
+    <script>
+        var navbar=document.getElementById("navbar")
+        var menu=document.getElementById("menu")
+        var undo=document.getElementById("close")
+        navbar.addEventListener("click",function(){
+            menu.style.right="0%"
+            
+        })
+        undo.addEventListener("click",function(){
+            menu.style.right="-50%"
+        })
+    
+    </script>
 
 
 
